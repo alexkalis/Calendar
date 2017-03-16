@@ -1,28 +1,28 @@
 <?php
 
-require(ROOT . "model/StudentModel.php");
+require(ROOT . "model/BirthdayModel.php");
 
 function index()
 {
-	render("student/index", array(
-		'students' => getAllStudents()
+	render("birthday/index", array(
+		'birthdays' => getAllBirthdays()
 	));
 }
 
 function create()
 {
 	//formulier tonen
-	render("student/create");
+	render("birthday/create");
 }
 
 function createSave()
 {
 
-	if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['gender'])) {
-		createStudent($_POST['firstname'], $_POST['lastname'], $_POST['gender']);
+	if (isset($_POST['person']) && isset($_POST['day']) && isset($_POST['month']) && isset($_POST['year'])) {
+		createBirthday($_POST['person'], $_POST['day'], $_POST['month'], $_POST['year']);
 	}
 
-	header("Location:" . URL . "student/index");
+	header("Location:" . URL . "birthday/index");
 }
 
 function edit()
@@ -31,7 +31,7 @@ function edit()
 
 	// getStudent(1);
 
-	render("student/edit");	
+	render("birthday/edit");	
 }
 
 function editSave()
@@ -42,8 +42,8 @@ function editSave()
 function delete($id)
 {
 	if (isset($id)) {
-		deleteStudent($id);
+		deleteBirthday($id);
 	}
 
-	header("Location:" . URL . "student/index");
+	header("Location:" . URL . "Birthday/index");
 }

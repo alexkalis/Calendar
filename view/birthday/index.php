@@ -8,17 +8,18 @@
 			<th colspan="2">Actie</th>
 		</tr>
 		
-		<?php foreach ($students as $student) { ?>
+		<?php foreach ($birthdays as $birthday) { ?>
 		<tr>
-			<td><?= $student['student_id']; ?></td>
-			<td><?= $student['student_firstname']; ?></td>
-			<td><?= $student['student_lastname']; ?></td>
-			<td><?= $student['student_gender']; ?></td>
-			<td><a href="<?= URL ?>student/edit/<?= $student['student_id'] ?>">Edit</a></td>
-			<td><a href="<?= URL ?>student/delete/<?= $student['student_id'] ?>">Delete</a></td>
+			<td><?= $birthday['birthday_id']; ?></td>
+			<td><?= $birthday['birthday_person']; ?></td>
+			<td><?= $birthday['birthday_day']; ?></td>
+			<td><?= $birthday['birthday_month']; ?></td>
+			<td><?= $birthday['birthday_year']; ?></td>
+			<td><a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>">Edit</a></td>
+			<td><a href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">Delete</a></td>
 		</tr>
 		<?php } ?>
 
 	</table>
-	<a href="<?= URL ?>student/create">Toevoegen</a>
+	<a href="<?= URL ?>birthday/create">Toevoegen</a>
 </div>
