@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<?php 
+include 'index_two.php';
+ ?>
+
 <div class="container">
 	<table border="1">
 		<tr>
@@ -21,5 +32,8 @@
 		<?php } ?>
 
 	</table>
-	<a href="<?= URL ?>birthday/create">Toevoegen</a>
+	<a href="<?= URL ?>../birthday/create">Toevoegen</a>
+
 </div>
+</body>
+</html>

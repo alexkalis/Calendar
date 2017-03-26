@@ -1,13 +1,16 @@
-<div class="container">
-	<form action="<?= URL ?>birthday/createSave" method="post">
-	
-		<input type="text" name="person" placeholder="john">
-		<input type="text" name="day" placeholder="5">
-		<input type="text" name="month" placeholder="12">
-		<input type="text" name="year" placeholder="1999">
+<div class="all_create">
 
-		<input type="submit" value="Verzenden">
+<div class="container">
+	<form action="index.php" method="post">
+	
+		<input class="create_input" type="text" name="person" placeholder="john">
+		<input class="create_input"  type="text" name="day" placeholder="5">
+		<input class="create_input"  type="text" name="month" placeholder="12">
+		<input class="create_input"  type="text" name="year" placeholder="1999">
+
+		<input class="button_create button1"  type="submit" value="Verzenden">
 	
 	</form>
-
-</div>
+	<link rel="stylesheet" type="text/css" href="../../public/css/css_all.css">
+	</div>
+	</div>
