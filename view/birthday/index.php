@@ -3,20 +3,22 @@
 <head>
 	<title>index</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../public/css/css_all.css">
 </head>
 <body>
-<?php 
-include 'index_two.php';
- ?>
-
+<?php
+require '../../model/BirthdayModel.php'; 
+  ?>
+  
 <div class="container">
 	<table border="1">
 		<tr>
-			<th>#</th>
-			<th>Voornaam</th>
-			<th>Achternaam</th>
-			<th>Geslacht</th>
-			<th colspan="2">Actie</th>
+			<th id="table">#</th>
+			<th id="table">Naam</th>
+			<th id="table">Dag</th>
+			<th id="table">Maand</th>
+			<th id="table">Jaar</th>
+			
 		</tr>
 		
 		<?php foreach ($birthdays as $birthday) { ?>
@@ -32,7 +34,7 @@ include 'index_two.php';
 		<?php } ?>
 
 	</table>
-	<a href="<?= URL ?>../birthday/create">Toevoegen</a>
+	<a href="../birthday/create" class="button_index">Toevoegen</a>
 
 </div>
 </body>

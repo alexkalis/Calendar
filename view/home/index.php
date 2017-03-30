@@ -5,9 +5,7 @@
   <meta charset="utf-8">
 </head>
 <body>
-<?php 
-include 'index_two.php';
- ?>
+
 
 <div class="container">
   <table border="1">
@@ -19,7 +17,7 @@ include 'index_two.php';
       <th colspan="2">Actie</th>
     </tr>
     
-    <?php foreach ($birthdays as $birthday) { ?>
+    <?php foreach ($calendar as $birthday) { ?>
     <tr>
       <td><?= $birthday['birthday_id']; ?></td>
       <td><?= $birthday['birthday_person']; ?></td>

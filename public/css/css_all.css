@@ -2,6 +2,22 @@
 	margin-left: 320px;
 	margin-top: 40px;
 }
+.button_index {
+
+    font-size: 24px;
+    font-style: italic;
+    color: white;   
+    padding: 5px;
+    text-decoration-line: none;
+  
+}
+body {
+  background-color: #212121 ;
+}
+th {
+    background-color: #E64A19;
+    color: white;
+}
 
 .button_create {
 
