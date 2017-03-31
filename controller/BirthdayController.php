@@ -4,7 +4,7 @@ require(ROOT . "model/BirthdayModel.php");
 
 function index()
 {
-	render("birthday/index", array(
+	render("birthday/index.php", array(
 		'birthday' => getAllBirthdays()
 	));
 }
@@ -12,7 +12,7 @@ function index()
 function create()
 {
 	//formulier tonen
-	render("birthday/create");
+	render("birthday/create.php");
 }
 
 function createSave()
@@ -22,7 +22,7 @@ function createSave()
 		createBirthday($_POST['person'], $_POST['day'], $_POST['month'], $_POST['year']);
 	}
 
-	header("Location:" . URL . "birthday/index");
+	header("Location:" . URL . "birthday/index.php");
 }
 
 function edit()
@@ -31,20 +31,20 @@ function edit()
 
 	// getStudent(1);
 
-	render("birthday/edit");	
+	render("birthday/edit.php");	
 }
 
 function editSave()
 {
 	
 } 
-
+	
 function delete($id)
 {
 	if (isset($id)) {
 		deleteBirthday($id);
 	}
 
-	header("Location:" . URL . "Birthday/index");
+	header("Location:" . URL . "Birthday/index.php");
 }
 ?>
