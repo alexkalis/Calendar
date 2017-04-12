@@ -1,14 +1,13 @@
 	<link rel="stylesheet" type="text/css" href="../../public/css/css_all.css">
 
-<div class="all_create">
+	<div class="container">
 
-<div class="container">
 	<form action="index.php" method="post">
 	
-	<input class="create_input" type="text" name="person" placeholder="john">
+	<input class="create_input" type="text" name="person" placeholder="voornaam">
 
-<form class="action_create" action="action_create.php">
-  <select name="year">
+<form class="action_create" action="index.php">
+  <select name="year" class="input_create">
     <option class="value" value="1">1</option>
     <option class="value" value="2">2</option>
     <option class="value" value="3">3</option>
@@ -41,30 +40,95 @@
     <option class="value" value="30">30</option>
     <option class="value" value="31">31</option>
 
-</select>
+
+  </select>
 
 
-	<form class="action_create" action="action_create.php">
-  		<select name="year">
+  	<form class="action_create" action="action_create.php">
+    		<select name="year" class="input_create">
 
-  		<option class="value two" value="1">1</option>
-  		<option class="value two" value="2">2</option>
-		<option class="value two" value="3">3</option>
-		<option class="value two" value="4">4</option>
-		<option class="value two" value="5">5</option>
-		<option class="value two" value="6">6</option>
-		<option class="value two" value="7">7</option>
-		<option class="value two" value="8">8</option>
-		<option class="value two" value="9">9</option>
-		<option class="value two" value="10">10</option>
-		<option class="value two" value="11">11</option>
-		<option class="value two" value="12">12</option>
+    		<option class="value two" value="1">1</option>
+    		<option class="value two" value="2">2</option>
+    		<option class="value two" value="3">3</option>
+    		<option class="value two" value="4">4</option>
+    		<option class="value two" value="5">5</option>
+    		<option class="value two" value="6">6</option>
+    		<option class="value two" value="7">7</option>
+    		<option class="value two" value="8">8</option>
+    		<option class="value two" value="9">9</option>
+    		<option class="value two" value="10">10</option>
+    		<option class="value two" value="11">11</option>
+    		<option class="value two" value="12">12</option>
 
-		<input class="create_input"  type="text" name="year" placeholder="1999">
+  		</select>
+    	<form class="action_create" action="action_create.php">
+      		<select name="year" class="input_create">
 
-		<input class="button_create button1"  type="submit" value="Verzenden">
+      		<option class="value two" value="1">2016</option>
+      		<option class="value two" value="2">2015</option>
+      		<option class="value two" value="">2014</option>
+      		<option class="value two" value="">2013</option>
+      		<option class="value two" value="">2012</option>
+      		<option class="value two" value="">2011</option>
+      		<option class="value two" value="">2010</option>
+      		<option class="value two" value="">2009</option>
+      		<option class="value two" value="">2008</option>
+      		<option class="value two" value="">2007</option>
+      		<option class="value two" value="">2006</option>
+      		<option class="value two" value="">2005</option>
+      		<option class="value two" value="">2004</option>
+      		<option class="value two" value="">2003</option>
+      		<option class="value two" value="">2002</option>
+      		<option class="value two" value="">2001</option>
+      		<option class="value two" value="">2000</option>
+      		<option class="value two" value="">1999</option>
+      		<option class="value two" value="">1998</option>
+      		<option class="value two" value="">1997</option>
+      		<option class="value two" value="">1996</option>
+      		<option class="value two" value="">1998</option>
+      		<option class="value two" value="">1997</option>
+      		<option class="value two" value="">1996</option>
+      		<option class="value two" value="">1995</option>
+      		<option class="value two" value="">1994</option>
+      		<option class="value two" value="">1993</option>
+      		<option class="value two" value="">1992</option>
+      		<option class="value two" value="">1991</option>
+      		<option class="value two" value="">1990</option>
+      		<option class="value two" value="">1989</option>
+      		<option class="value two" value="">1988</option>
+      		<option class="value two" value="">1987</option>
+      		<option class="value two" value="">1986</option>
+      		<option class="value two" value="">1985</option>
+      		<option class="value two" value="">1984</option>
+      		<option class="value two" value="">1983</option>
+      		<option class="value two" value="">1982</option>
+      		<option class="value two" value="">1981</option>
+      		<option class="value two" value="">1980</option>
+      		<option class="value two" value="">1979</option>
+      		<option class="value two" value="">1978</option>
+      		<option class="value two" value="">1977</option>
+      		<option class="value two" value="">1976</option>
+      		<option class="value two" value="">1975</option>
+      		<option class="value two" value="">1974</option>
+      		<option class="value two" value="">1973</option>
+      		<option class="value two" value="">1972</option>
+      		<option class="value two" value="">1971</option>
+      		<option class="value two" value="">1970	</option>
+      		<option class="value two" value="">1969</option>
+      		<option class="value two" value="">1968</option>
+      		<option class="value two" value="">1967</option>
+      		<option class="value two" value="">1966</option>
+      		<option class="value two" value="">1965</option>
+      		<option class="value two" value="">1964</option>
+      		<option class="value two" value="">1963</option>
+      		<option class="value two" value="">1962</option>
+      		<option class="value two" value="">1961</option>
+      		<option class="value two" value="">1960</option>
+    	</select>
+
+		<input class="button_create button1" name="data" type="submit" value="Verzenden">
 	
-	</form>
+	
 	<link rel="stylesheet" type="text/css" href="../../public/css/css_all.css">
 	</div>
 	</div>

@@ -1,50 +1,42 @@
 <?php
-
-require(ROOT . "model/BirthdayModel.php");
-
+require (ROOT .  "model/Birthdaymodel.php");
 function index()
 {
-	render("birthday/index.php", array(
-		'birthday' => getAllBirthdays()
-	));
+	$birthdays = getAllBirthdays();
+	render("birthday/index", array(
+		"birthdays" => $birthday ));
 }
-
 function create()
 {
-	//formulier tonen
-	render("birthday/create.php");
+	render("birthday/create");
 }
-
 function createSave()
 {
-
-	if (isset($_POST['person']) && isset($_POST['day']) && isset($_POST['month']) && isset($_POST['year'])) {
-		createBirthday($_POST['person'], $_POST['day'], $_POST['month'], $_POST['year']);
+	if (!createBirthday()) {
+		header("Location:" . URL . "error/index");
+		exit();
 	}
-
-	header("Location:" . URL . "birthday/index.php");
+	header("Location:" . URL . "birthday/index");
 }
-
-function edit()
+function edit($id)
 {
-	//$student = getStudent();
-
-	// getStudent(1);
-
-	render("birthday/edit.php");	
+	render("birthday/edit", array(
+		'birthday' => getBirthday($id)
+	));
 }
-
 function editSave()
 {
-	
+	if (!editBirthday()) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
+	header("Location:" . URL . "birthday/index");
 } 
-	
 function delete($id)
 {
-	if (isset($id)) {
-		deleteBirthday($id);
+	if (!deleteBirthday($id)) {
+		header("Location:" . URL . "error/index");
+		exit();
 	}
-
-	header("Location:" . URL . "Birthday/index.php");
+	header("Location:" . URL . "birthday/index");
 }
-?>

@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>index</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../../public/css/css_all.css">
-</head>
-
-<body>
-
-  
+<title>Calendar</title>
+<link rel="stylesheet" type="text/css" href="../../public/css/css_all.css">	
 	<div class="container">
 		<table border="1">
 			<tr>
@@ -17,18 +8,21 @@
 				<th id="table">Dag</th>
 				<th id="table">Maand</th>
 				<th id="table">Jaar</th>
+				<th colspan="2">Actie</th>
 				
-			</tr>
-			
-			<?php foreach ($birthdays as $birthday) { ?>
+			</tr>	
+				
+			<?php 
+			 $birthdays = array();
+			 foreach ($birthdays as $birthday) { ?>
 			<tr>
-				<td><?= $birthday['birthday_id']; ?></td>
-				<td><?= $birthday['birthday_person']; ?></td>
-				<td><?= $birthday['birthday_day']; ?></td>
-				<td><?= $birthday['birthday_month']; ?></td>
-				<td><?= $birthday['birthday_year']; ?></td>
-				<td><a href="<?= URL ?>birthday/edit/<?= $birthday['birthday_id'] ?>">Edit</a></td>
-				<td><a href="<?= URL ?>birthday/delete/<?= $birthday['birthday_id'] ?>">Delete</a></td>
+				<td><?= $birthday['id']; ?></td>
+				<td><?= $birthday['person']; ?></td>
+				<td><?= $birthday['day']; ?></td>
+				<td><?= $birthday['month']; ?></td>
+				<td><?= $birthday['year']; ?></td>
+				<td><a href="<?= URL . 'birthday/edit/' .$birthday['id'] ?>">Edit</a></td>
+				<td><a href="<?= URL . 'birthday/delete/' . $birthday['id'] ?>">Delete</a></td>
 			</tr>
 			<?php } ?>
 

@@ -17,7 +17,7 @@
       <th colspan="2">Actie</th>
     </tr>
     
-    <?php foreach ($calendar as $birthday) { ?>
+    <?php foreach ($birthdays as $birthday) { ?>
     <tr>
       <td><?= $birthday['birthday_id']; ?></td>
       <td><?= $birthday['birthday_person']; ?></td>
